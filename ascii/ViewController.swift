@@ -83,6 +83,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         view.addSubview(cameraButton)
         view.addSubview(galleryButton)
         view.addSubview(nextButton)
+        print(view.frame.width * 0.9)
+
         
         setupSubviews()
     }
