@@ -13,6 +13,9 @@
 		FACAB6CD298388E500E10425 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACAB6CB298388E500E10425 /* Main.storyboard */; };
 		FACAB6CF298388E900E10425 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACAB6CE298388E900E10425 /* Assets.xcassets */; };
 		FACAB6D2298388E900E10425 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACAB6D0298388E900E10425 /* LaunchScreen.storyboard */; };
+		FACAB6DA29838A2100E10425 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACAB6D929838A2000E10425 /* CircleButton.swift */; };
+		FACAB6DC2983A90600E10425 /* AsciiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACAB6DB2983A90600E10425 /* AsciiVC.swift */; };
+		FACAB6DF2983AE5300E10425 /* SwiftImage in Frameworks */ = {isa = PBXBuildFile; productRef = FACAB6DE2983AE5300E10425 /* SwiftImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,8 @@
 		FACAB6CE298388E900E10425 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FACAB6D1298388E900E10425 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FACAB6D3298388E900E10425 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FACAB6D929838A2000E10425 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		FACAB6DB2983A90600E10425 /* AsciiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsciiVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FACAB6DF2983AE5300E10425 /* SwiftImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,8 @@
 				FACAB6CE298388E900E10425 /* Assets.xcassets */,
 				FACAB6D0298388E900E10425 /* LaunchScreen.storyboard */,
 				FACAB6D3298388E900E10425 /* Info.plist */,
+				FACAB6D929838A2000E10425 /* CircleButton.swift */,
+				FACAB6DB2983A90600E10425 /* AsciiVC.swift */,
 			);
 			path = ascii;
 			sourceTree = "<group>";
@@ -83,6 +91,9 @@
 			dependencies = (
 			);
 			name = ascii;
+			packageProductDependencies = (
+				FACAB6DE2983AE5300E10425 /* SwiftImage */,
+			);
 			productName = ascii;
 			productReference = FACAB6C2298388E500E10425 /* ascii.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = FACAB6B9298388E500E10425;
+			packageReferences = (
+				FACAB6DD2983AE5300E10425 /* XCRemoteSwiftPackageReference "swift-image" */,
+			);
 			productRefGroup = FACAB6C3298388E500E10425 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,7 +154,9 @@
 			files = (
 				FACAB6CA298388E500E10425 /* ViewController.swift in Sources */,
 				FACAB6C6298388E500E10425 /* AppDelegate.swift in Sources */,
+				FACAB6DC2983A90600E10425 /* AsciiVC.swift in Sources */,
 				FACAB6C8298388E500E10425 /* SceneDelegate.swift in Sources */,
+				FACAB6DA29838A2100E10425 /* CircleButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,8 +309,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,8 +338,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,6 +376,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FACAB6DD2983AE5300E10425 /* XCRemoteSwiftPackageReference "swift-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/koher/swift-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FACAB6DE2983AE5300E10425 /* SwiftImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FACAB6DD2983AE5300E10425 /* XCRemoteSwiftPackageReference "swift-image" */;
+			productName = SwiftImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FACAB6BA298388E500E10425 /* Project object */;
 }
