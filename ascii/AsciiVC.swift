@@ -11,14 +11,16 @@ import SwiftImage
 
 class AsciiVC: UIViewController {
     
-    let image: Image<RGBA<UInt8>>
-    
+    let uiImage: UIImage
+
     var asciiText: String = ""
     
     let asciiLabel: UITextView = {
         let label = UITextView()
-        label.backgroundColor = .clear
-        label.textColor = .white
+//        label.backgroundColor = .white
+//        label.textColor = .white
+        label.textAlignment = .center
+        label.layer.cornerRadius = 15
         label.font = .monospacedSystemFont(ofSize: 4, weight: .regular)
         label.text = """
                ......                  .............
@@ -64,54 +66,86 @@ class AsciiVC: UIViewController {
         return label
     }()
     
+    let nextButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Copy", for: .normal)
+        button.setTitleColor(UIColor(named: "bg"), for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 16, weight: .bold)
+        button.backgroundColor = .white
+        button.layer.cornerRadius = 15
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(copyPressed), for: .touchUpInside)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor(named: "bg")
         
         view.addSubview(asciiLabel)
-        
+        view.addSubview(nextButton)
+                
+        nextButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        nextButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6).isActive = true
+        nextButton.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        nextButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -25).isActive = true
+
         asciiLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        asciiLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        asciiLabel.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         asciiLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.9).isActive = true
-        asciiLabel.heightAnchor.constraint(equalTo: asciiLabel.heightAnchor, multiplier: 0.75).isActive = true
+        asciiLabel.bottomAnchor.constraint(equalTo: nextButton.topAnchor, constant: -25).isActive = true
+
         
+        let newSize = resize()
+        let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
+        
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+        uiImage.draw(in: rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        if let newImage = newImage {
+            let image = Image<RGBA<UInt8>>(uiImage: newImage)
+            let lum = rgbToLuminance(image: image)
+            print(lum.count)
+            for x in 0..<lum.count {
+                for y in 0..<lum[x].count {
+                    asciiText.append(selectAsciiChar(value: lum[x][y]))
+                }
+                asciiText.append("\n")
+            }
+            
+            asciiLabel.text = asciiText
+        }
     }
     
     init(image: UIImage){
-        self.image = Image(uiImage: image)
+        self.uiImage = image
         super.init(nibName: nil, bundle: nil)
-                
-        let resized = resize(image: self.image)
-        let lum = rgbToLuminance(image: resized)
-        for x in 0..<lum.count {
-            for y in 0..<lum[x].count {
-                asciiText.append(selectAsciiChar(value: lum[x][y]))
-            }
-            asciiText.append("\n")
-        }
-        
-        asciiLabel.text = asciiText
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func resize(image: Image<RGBA<UInt8>>) -> Image<RGBA<UInt8>> {
-        let ratio = CGFloat(image.height) / CGFloat(image.width)
+    func resize() -> CGSize {
+        let ratio = CGFloat(uiImage.size.height) / CGFloat(uiImage.size.width)
         
-        let maxWidth = 100
-        let height = Int(CGFloat(maxWidth) * ratio)
-        print("WIDTH: \(maxWidth)")
-        print("HEIGHT: \(height)")
-        return image.resizedTo(width: maxWidth, height: Int(height))
+        let maxWidth: CGFloat = 100
+        if uiImage.size.width > maxWidth {
+            let height = CGFloat(maxWidth) * ratio
+            return CGSize(width: maxWidth, height: height)
+
+        } else {
+            return CGSize(width: uiImage.size.width, height: uiImage.size.height)
+        }
     }
     
     
     func rgbToLuminance(image: Image<RGBA<UInt8>>) -> [[Float]] {
         var arr: [[Float]] = Array(repeating: Array<Float>(repeating: 0, count: image.width), count: image.height)
-        
+            
         for x in image.xRange {
             for y in image.yRange {
                 // formula: https://stackoverflow.com/questions/596216/formula-to-determine-perceived-brightness-of-rgb-color
@@ -133,6 +167,10 @@ class AsciiVC: UIViewController {
         
         let index = Int((value / 255.0) * Float(options.count))
         return options[index]
+    }
+    
+    @objc func copyPressed(){
+        
     }
 }
 
