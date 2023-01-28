@@ -102,10 +102,12 @@
 ## Screenshots
 
 <img src="images/home.PNG" alt="Home Screen where you select photo" width="200">
-<br>
+<br/>
 <img src="images/low.PNG" alt="Screen with photo converted at low quality" width="200">
+<p>Image converted at low quality</p>
+<br/>
 <img src="images/high.PNG" alt="Screen with photo converted at max quality" width="200">
-
+<p>Image converted at max quality</p>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
