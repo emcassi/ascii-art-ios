@@ -103,12 +103,14 @@
 <!-- Screenshots -->
 ## Screenshots
 
-<img src="images/home.PNG" alt="Home Screen where you select photo" width="200">
+<img src="images/home.JPG" alt="Home Screen where you select photo" width="200">
 <br/>
-<img src="images/low.PNG" alt="Screen with photo converted at low quality" width="200">
+<img src="images/low.JPG" alt="Screen with photo converted at low quality" width="200">
 <p>Image converted at low quality</p>
+<img src="images/high.JPG" alt="Screen with photo converted at max quality" width="200">
+<p>Image converted at medium quality</p>
 <br/>
-<img src="images/high.PNG" alt="Screen with photo converted at max quality" width="200">
+<img src="images/high.JPG" alt="Screen with photo converted at max quality" width="200">
 <p>Image converted at max quality</p>
 
 
