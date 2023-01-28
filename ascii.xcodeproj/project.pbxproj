@@ -306,6 +306,7 @@
 				DEVELOPMENT_TEAM = TX4WW8TVSW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ascii/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Asciify;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This is required to take a photo";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -318,11 +319,14 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.alexwayne.ascii-art";
+				PRODUCT_BUNDLE_IDENTIFIER = org.alexwayne.asciify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -336,6 +340,7 @@
 				DEVELOPMENT_TEAM = TX4WW8TVSW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ascii/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Asciify;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This is required to take a photo";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -348,11 +353,14 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.alexwayne.ascii-art";
+				PRODUCT_BUNDLE_IDENTIFIER = org.alexwayne.asciify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

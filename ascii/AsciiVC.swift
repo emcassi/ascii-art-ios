@@ -20,7 +20,8 @@ class AsciiVC: UIViewController {
     let textView: UITextView = {
         let label = UITextView()
         label.backgroundColor = UIColor(named: "accent")
-//        label.textColor = .white
+        label.textColor = .black
+        
         label.isEditable = false
         label.textAlignment = .center
         label.layer.cornerRadius = 15

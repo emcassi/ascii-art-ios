@@ -15,7 +15,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     let instructions: UILabel = {
         let label = UILabel()
-        label.text = "Select an image to convert"
+        label.text = "Select an image to Asciify"
         label.textColor = .white
         label.textAlignment = .center
         label.numberOfLines = 2
