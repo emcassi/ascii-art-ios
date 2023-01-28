@@ -34,10 +34,10 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">ASCII Art</h3>
+<h3 align="center">Asciify</h3>
 
   <p align="center">
-    ASCII Art is an iOS app that lets you convert your photos to ascii art - photos made of <a href="https://en.wikipedia.org/wiki/ASCII">ASCII characters</a>
+    Asciify is an iOS app that lets you convert your photos to ascii art - photos made of <a href="https://en.wikipedia.org/wiki/ASCII">ASCII characters</a>
     <br/>
     <a href="https://github.com/emcassi/ascii-art-ios">Download it here</a>
     <br/>
