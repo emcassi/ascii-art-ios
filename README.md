@@ -31,15 +31,15 @@
 <br />
 <div align="center">
   <a href="https://github.com/emcassi/ascii-art-ios">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+   <!-- <img src="images/logo.png" alt="Logo" width="80" height="80"> -->
   </a>
 
-<h3 align="center">Mood Tracker</h3>
+<h3 align="center">ASCII Art</h3>
 
   <p align="center">
-    ASCII Art is an iOS app that lets you convert your photos to ascii art - photos made of [ASCII characters](https://en.wikipedia.org/wiki/ASCII)
-    
-    ·
+    ASCII Art is an iOS app that lets you convert your photos to ascii art - photos made of <a href="https://en.wikipedia.org/wiki/ASCII">ASCII characters</a>
+    <br/>
+    <br/>
     <a href="https://github.com/emcassi/ascii-art-ios/issues">Report Bug</a>
     ·
     <a href="https://github.com/emcassi/ascii-art-ios/issues">Request Feature</a>
@@ -62,7 +62,7 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+<!--         <li><a href="#installation">Installation</a></li> -->
       </ul>
     </li>
     <li><a href="#screenshots">Screenshots</a></li>
@@ -83,7 +83,7 @@
 
 * [![UIKit][UIKit]][UIKit-url]
 * [![Swift][Swift]][Swift-url]
-* [![Firebase][Firebase]][Firebase-url]
+* [![SwiftImage][SwiftImage]][SwiftImage-url]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -92,9 +92,9 @@
 
 <!-- GETTING STARTED -->
 
-## Installation
+<!-- ## Installation
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 
 
@@ -139,7 +139,7 @@ Project Link: [https://github.com/emcassi/ascii-art-ios](https://github.com/emca
 
 [UIKit]: https://img.shields.io/badge/uikit-fff?style=for-the-badge&logo=uikit
 [Swift]: https://img.shields.io/badge/swift-fff?style=for-the-badge&logo=swift&logoColor=orange
-[SwiftImage]: https://img.shields.io/badge/swift-image-1a73e8?style=for-the-badge
+[SwiftImage]: https://img.shields.io/badge/swift_image-1a73e8?style=for-the-badge
 
 [UIKit-url]: https://developer.apple.com/documentation/uikit
 [Swift-url]: https://developer.apple.com/swift
