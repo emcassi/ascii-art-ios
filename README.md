@@ -31,13 +31,15 @@
 <br />
 <div align="center">
   <a href="https://github.com/emcassi/ascii-art-ios">
-   <!-- <img src="images/logo.png" alt="Logo" width="80" height="80"> -->
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">ASCII Art</h3>
 
   <p align="center">
     ASCII Art is an iOS app that lets you convert your photos to ascii art - photos made of <a href="https://en.wikipedia.org/wiki/ASCII">ASCII characters</a>
+    <br/>
+    <a href="https://github.com/emcassi/ascii-art-ios">Download it here</a>
     <br/>
     <br/>
     <a href="https://github.com/emcassi/ascii-art-ios/issues">Report Bug</a>
@@ -117,6 +119,8 @@
 
 Alex Wayne - [@emcassi_](https://twitter.com/emcassi_) - alex.wayne.dev@gmail.com
 
+[Download it here](https://github.com/emcassi/ascii-art-ios)
+<br/>
 Project Link: [https://github.com/emcassi/ascii-art-ios](https://github.com/emcassi/ascii-art-ios)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
